@@ -11,24 +11,17 @@
 <body>
     <h1>Barcodes:</h1>
     <!--REQUIRED: https://www.inflowinventory.com/blog/code-39-font-archon-free-barcode/-->
-    <!--<div id="barcodes" style="font-family: 'Archon Code 39 Barcode';
-                              color: black; font-size: 72pt;">
-    </div>-->
 
     <canvas id="myCanvas" width="800" height="800" style="border:1px solid #d3d3d3;">
 
         <script>
             let canvas = document.getElementById("myCanvas");
             let ctx = canvas.getContext("2d");
-            let barcodes = document.getElementById('barcodes');
             let array = ["0123456789", "SDEYUCBWLA",
                 "13GH56K2A7", "abcdefghij",
                 "The Cat Is Fat"
             ];
             for (let i = 0; i < array.length; i++) {
-                //array[i] = array[i].toUpperCase();
-                //barcodes.innerHTML += array[i] + "<br><br>";
-
                 ctx.font = "144px 'Archon Code 39 Barcode'";
                 ctx.fillText(array[i].toUpperCase(), 10, 144 + 150 * i);
             }
